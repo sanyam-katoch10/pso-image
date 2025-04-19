@@ -107,17 +107,6 @@ pip3 install -r requirements.txt
    python3 app.py
    ```
 
-2. The other method is you can directly pull this project from my Dockerhub using:
-
-   ```bash
-   docker pull chagantireddy/ispso:latest
-   ```
-
-3. Then run using:
-
-   ```bash
-   docker run -it --rm -p 5000:5000 chagantireddy/ispso:latest
-   ```
 
 ## Results
 
@@ -165,16 +154,6 @@ Gray Scale Image
 - To run it in more speed
 - Optimize Flask app.py
 - Optimize this Image Segmentation with different algorithm
-
-## 👏 And it's done!
-
-
-Follow this format:
-
-- Author's name - Team Roxx
-- Date of publication or update in parentheses.
-- Title or description of document.
-- URL.
 
 ## Owner
 
