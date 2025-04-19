@@ -80,7 +80,7 @@ The Code is written in Python 3.9. If you don&rsquo;t have Python installed you 
 1. Clone the repo
 
 ```bash
-git clone https://github.com/Chaganti-Reddy/ISPSO.git
+git clone https://github.com/sanyam-katoch10/pso-image.git
 ```
 
 2. Change your directory to the cloned repo
@@ -94,7 +94,7 @@ cd ISPSO
 ```bash
 python3 -m virtualenv my_env
 
-source my_env/bin/activate
+my_env\Scripts\activate 
 
 pip3 install -r requirements.txt
 ```
