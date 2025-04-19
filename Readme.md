@@ -86,13 +86,13 @@ git clone https://github.com/sanyam-katoch10/pso-image.git
 2. Change your directory to the cloned repo
 
 ```bash
-cd ISPSO
+cd iso-image
 ```
 
 3. Now, run the following command in your Terminal/Command Prompt to install the libraries required
 
 ```bash
-python3 -m virtualenv my_env
+python3 -m venv my_env
 
 my_env\Scripts\activate 
 
