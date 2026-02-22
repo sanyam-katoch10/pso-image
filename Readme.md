@@ -3,7 +3,6 @@
 </div>
 
 <div align="center">
-
 # SegViSion
 
 ### PSO-Powered Image Segmentation Web App
