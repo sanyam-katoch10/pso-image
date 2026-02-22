@@ -140,6 +140,6 @@ Open [http://localhost:5000](http://localhost:5000) in your browser.
 <div align="center">
   Built by <a href="https://github.com/sanyam-katoch10"><strong>Sanyam Katoch</strong></a>
   <p align="center">
-  © 2026 Sanyam Katoch
+  © SegViSion 2026
 </p>
 </div>
