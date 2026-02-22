@@ -11,7 +11,6 @@
 [![Flask](https://img.shields.io/badge/Flask-3.0+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
 [![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
 [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org)
-[![License](https://img.shields.io/badge/License-MIT-00e5ff?style=for-the-badge)](LICENSE)
 
 <br/>
 
@@ -135,16 +134,12 @@ Open [http://localhost:5000](http://localhost:5000) in your browser.
 - **Auto cleanup** — uploaded and result files auto-delete 120s after completion
 - **Spatial clustering** — `(X, Y)` coords in feature space prevent scattered, perceptually meaningless segments
 
----
-
-## 📄 License
-
-All rights reserved © [Sanyam Katoch](https://github.com/sanyam-katoch10)
 
 ---
 
 <div align="center">
   Built by <a href="https://github.com/sanyam-katoch10"><strong>Sanyam Katoch</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://segvision.onrender.com">🚀 Live Demo</a>
+  <p align="center">
+  © 2026 Sanyam Katoch
+</p>
 </div>
