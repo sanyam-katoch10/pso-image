@@ -1,6 +1,1 @@
-gunicorn app:app \
-  --workers 1 \
-  --threads 2 \
-  --timeout 120 \
-  --worker-class gthread \
-  --bind 0.0.0.0:8080
+gunicorn app:app --workers 1 --threads 2 --worker-class gthread --timeout 120 --max-requests 300 --max-requests-jitter 50 --bind 0.0.0.0:$PORT
