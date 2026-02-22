@@ -12,7 +12,9 @@
 
 <br/>
 
-**[🚀 Live Demo](https://segvision.onrender.com)** &nbsp;·&nbsp; **[GitHub](https://github.com/sanyam-katoch10)**
+<a href="https://segvision.up.railway.app">
+  <img src="https://img.shields.io/badge/🚀_Live_Demo-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white" />
+</a>
 
 <br/>
 
