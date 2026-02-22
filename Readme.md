@@ -1,4 +1,8 @@
 <div align="center">
+  <img src="static/logo.png" width="300" />
+</div>
+
+<div align="center">
 
 # SegViSion
 
