@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SegVision — Segment images using Particle Swarm Optimization.">
+    <title>SegViSion</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="nav-brand">
+                    <img src="/static/logo.png" alt="SegVision" class="nav-logo-img">
+                    <span class="nav-title">SegViSion</span>
+                </a>
+                <div class="nav-links">
+                    <a href="/" class="nav-link active">Segment</a>
+                    <a href="https://en.wikipedia.org/wiki/Particle_swarm_optimization" target="_blank"
+                        class="nav-link">Learn PSO</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-tag">
+                    <span class="indicator"></span>
+                    Model Online
+                </div>
+                <h1>Segment your images<br>with <em>swarm intelligence</em></h1>
+                <p class="hero-desc">
+                    Upload any image and SegVision will use Particle Swarm Optimization
+                    to find the best regions — not just recolor, but actually
+                    separate meaningful areas based on color and position.
+                </p>
+            </div>
+        </section>
+
+        <section class="container">
+            <form id="segmentForm" class="card" enctype="multipart/form-data">
+
+                <div id="dropzone" class="dropzone">
+                    <div class="dropzone-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                    </div>
+                    <p class="dropzone-text">
+                        Drop your image here, or <strong>click to browse</strong>
+                    </p>
+                    <p class="dropzone-hint">PNG, JPG, BMP, WebP — up to 16 MB</p>
+                    <div class="dropzone-preview">
+                        <img id="previewImg" src="" alt="Preview">
+                    </div>
+                    <div class="dropzone-file-info"></div>
+                    <input type="file" id="imageInput" name="image" accept="image/*" hidden>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label class="field-label" for="num_centroids">Segments</label>
+                        <select id="num_centroids" name="num_centroids" class="field-select">
+                            <option value="2">2 regions</option>
+                            <option value="3" selected>3 regions</option>
+                            <option value="4">4 regions</option>
+                            <option value="5">5 regions</option>
+                            <option value="6">6 regions</option>
+                            <option value="7">7 regions</option>
+                            <option value="8">8 regions</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="color">Mode</label>
+                        <select id="color" name="color" class="field-select">
+                            <option value="color">Color (RGB)</option>
+                            <option value="grayscale">Grayscale</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" id="segmentBtn" class="btn btn-primary" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                    Run Segmentation
+                </button>
+            </form>
+        </section>
+
+        <section class="container">
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <h3 class="step-title">Upload</h3>
+                    <p class="step-desc">Drop any image — a photo, illustration, satellite image. SegVision handles the
+                        rest.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <h3 class="step-title">Optimize</h3>
+                    <p class="step-desc">PSO particles explore the color+spatial space to find cluster boundaries,
+                        guided by swarm intelligence.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <h3 class="step-title">Compare</h3>
+                    <p class="step-desc">View original vs. segmented side-by-side. Download the result or try different
+                        settings.</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="progressOverlay" class="progress-overlay">
+            <div class="progress-box">
+                <div class="progress-ring">
+                    <svg viewBox="0 0 72 72">
+                        <circle class="ring-track" cx="36" cy="36" r="32" />
+                        <circle id="spinnerFill" class="ring-fill" cx="36" cy="36" r="32" />
+                    </svg>
+                    <div id="progressPercent" class="progress-pct">0%</div>
+                </div>
+                <h2 class="progress-label">Optimizing</h2>
+                <p id="progressStatus" class="progress-detail">Initializing swarm...</p>
+                <div class="progress-track">
+                    <div id="progressBarFill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p>Built by <a href='https://github.com/sanyam-katoch10' target='_blank'>Sanyam Katoch</a></p>
+                <p>SegViSion &copy; 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

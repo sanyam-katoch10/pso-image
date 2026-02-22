@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SegVision — Your segmentation result.">
+    <title>SegViSion — Result</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="nav-brand">
+                    <img src="/static/logo.png" alt="SegVision" class="nav-logo-img">
+                    <span class="nav-title">SegViSion</span>
+                </a>
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Segment</a>
+                    <a href="https://en.wikipedia.org/wiki/Particle_swarm_optimization" target="_blank"
+                        class="nav-link">Learn PSO</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="result-heading">
+            <div class="container">
+                <h1>Segmentation <em>complete</em></h1>
+                <p>Here's what SegVision found in your image.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="compare">
+                <div class="img-panel">
+                    <div class="img-panel-head">
+                        <div class="img-panel-dot src"></div>
+                        <span class="img-panel-label">Original</span>
+                    </div>
+                    <div class="img-panel-body">
+                        <img src="{{ original_image }}" alt="Original image">
+                    </div>
+                </div>
+                <div class="img-panel">
+                    <div class="img-panel-head">
+                        <div class="img-panel-dot out"></div>
+                        <span class="img-panel-label">Segmented</span>
+                    </div>
+                    <div class="img-panel-body">
+                        <img src="{{ segmented_image }}" alt="Segmented image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="actions">
+                <a href="/download/{{ job_id }}" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download
+                </a>
+                <a href="/" class="btn btn-outline">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="1 4 1 10 7 10" />
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                    </svg>
+                    Try another
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>Built by <a href='https://github.com/sanyam-katoch10' target='_blank'>Sanyam Katoch</a></p>
+                <p>SegViSion &copy; 2026</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
